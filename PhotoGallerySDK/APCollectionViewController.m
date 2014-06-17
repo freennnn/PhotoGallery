@@ -75,10 +75,14 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     APCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"APCollectionViewCell" forIndexPath:indexPath];
+    [cell.activityIndicatorView startAnimating];
     [cell.imageView setImageWithURL:((APPhoto *)self.photos[indexPath.row]).url
                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
                               NSLog(@"image at index %d loaded",indexPath.row);
+                              [cell.activityIndicatorView stopAnimating];
+                              [cell.activityIndicatorView setHidden:YES];
                           }];
+
 
     return cell;
 }

@@ -30,6 +30,7 @@
 		D493A955194F89070067B217 /* APPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D493A953194F89070067B217 /* APPhoto.m */; };
 		D493A958194F96F90067B217 /* APCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D493A957194F96F90067B217 /* APCollectionViewCell.m */; };
 		D493A959194F96F90067B217 /* APCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D493A957194F96F90067B217 /* APCollectionViewCell.m */; };
+		D493A95B194FF3B60067B217 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D493A95A194FF3B60067B217 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		D493A953194F89070067B217 /* APPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPhoto.m; sourceTree = "<group>"; };
 		D493A956194F96F90067B217 /* APCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCollectionViewCell.h; sourceTree = "<group>"; };
 		D493A957194F96F90067B217 /* APCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCollectionViewCell.m; sourceTree = "<group>"; };
+		D493A95A194FF3B60067B217 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		D535C15276164B39AF60B51C /* Pods-PhotoGallery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGallery.xcconfig"; path = "Pods/Pods-PhotoGallery.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D493A95B194FF3B60067B217 /* AssetsLibrary.framework in Frameworks */,
 				D493A918194F36930067B217 /* CoreGraphics.framework in Frameworks */,
 				D493A91A194F36930067B217 /* UIKit.framework in Frameworks */,
 				D493A916194F36930067B217 /* Foundation.framework in Frameworks */,
@@ -122,6 +125,7 @@
 		D493A914194F36930067B217 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D493A95A194FF3B60067B217 /* AssetsLibrary.framework */,
 				D493A915194F36930067B217 /* Foundation.framework */,
 				D493A917194F36930067B217 /* CoreGraphics.framework */,
 				D493A919194F36930067B217 /* UIKit.framework */,

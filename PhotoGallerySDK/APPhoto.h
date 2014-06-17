@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface APPhoto : NSObject
-@property (nonatomic, readonly) NSURL *url;
+@property (nonatomic, strong, readonly) NSURL *url;
+@property (nonatomic, strong, readonly) UIImage *image;
 
 + (APPhoto *)photoWithURL:(NSURL *)url;
++ (APPhoto *)photoWithImage:(UIImage *)image;
 
 @end

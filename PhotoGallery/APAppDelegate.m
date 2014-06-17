@@ -7,12 +7,19 @@
 //
 
 #import "APAppDelegate.h"
+#import <SDWebImage/SDImageCache.h>
 
 @implementation APAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    
+    [[SDImageCache sharedImageCache] clearDisk];
+    [[SDImageCache sharedImageCache] cleanDisk];
+    [[SDImageCache sharedImageCache] clearMemory];
+    
     return YES;
 }
 							

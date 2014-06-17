@@ -29,10 +29,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5Cp-4n-SZl">
+                                            <rect key="frame" x="32" y="31" width="37" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
+                                    <outlet property="activityIndicatorView" destination="5Cp-4n-SZl" id="6Ep-86-FEd"/>
                                     <outlet property="imageView" destination="YWB-fj-tbu" id="Mhp-cM-lsC"/>
                                 </connections>
                             </collectionViewCell>

@@ -25,6 +25,19 @@
     return self;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSArray *visibleCells = [self.collectionView visibleCells];
+    if (visibleCells)
+    {
+        for (APCollectionViewCell *cell in visibleCells)
+        {
+            [cell.imageView cancelCurrentImageLoad];
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -85,9 +98,15 @@
 }
 
 #pragma mark - UICollectionViewDelegate
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // TODO: Select Item
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [((APCollectionViewCell *)cell).imageView cancelCurrentImageLoad];
 }
 
 

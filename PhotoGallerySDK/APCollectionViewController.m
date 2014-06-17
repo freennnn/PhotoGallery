@@ -25,17 +25,6 @@
     return self;
 }
 
-- (void)awakeFromNib
-{
-    
-    _photos = [[NSMutableArray alloc] init];
-    [self.photos addObject:[APPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg"]]];
-    [self.photos addObject:[APPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_b.jpg"]]];
-    [self.photos addObject:[APPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_b.jpg"]]];
-    [self.photos addObject:[APPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_b.jpg"]]];
-    [self.photos addObject:[APPhoto photoWithURL:[NSURL URLWithString:@"http://farm3.static.flickr.com/2449/4052876281_6e068ac860_b.jpg"]]];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -75,14 +64,22 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     APCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"APCollectionViewCell" forIndexPath:indexPath];
-    [cell.activityIndicatorView startAnimating];
-    [cell.imageView setImageWithURL:((APPhoto *)self.photos[indexPath.row]).url
-                          completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-                              NSLog(@"image at index %d loaded",indexPath.row);
-                              [cell.activityIndicatorView stopAnimating];
-                              [cell.activityIndicatorView setHidden:YES];
-                          }];
-
+    APPhoto *currentPhoto = self.photos[indexPath.row];
+    if (currentPhoto.image)
+    {
+        [cell.imageView setImage:currentPhoto.image];
+        [cell.activityIndicatorView setHidden:YES];
+    }
+    else
+    {
+        [cell.activityIndicatorView startAnimating];
+        [cell.imageView setImageWithURL:currentPhoto.url
+                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+                                  NSLog(@"image at index %d loaded",indexPath.row);
+                                  [cell.activityIndicatorView stopAnimating];
+                                  [cell.activityIndicatorView setHidden:YES];
+                              }];
+    }
 
     return cell;
 }

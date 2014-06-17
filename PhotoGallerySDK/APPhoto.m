@@ -19,9 +19,23 @@
 	return self;
 }
 
+- (id)initWithImage:(UIImage*)image
+{
+    if (self = [super init])
+    {
+        _image = image;
+    }
+    return self;
+}
+
 + (APPhoto *)photoWithURL:(NSURL *)url
 {
 	return [[APPhoto alloc] initWithURL:url];
+}
+
++ (APPhoto *)photoWithImage:(UIImage *)image
+{
+	return [[APPhoto alloc] initWithImage:image];
 }
 
 @end

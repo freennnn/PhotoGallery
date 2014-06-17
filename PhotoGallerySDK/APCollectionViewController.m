@@ -7,6 +7,7 @@
 //
 
 #import "APCollectionViewController.h"
+#import "APPhotoDetailViewController.h"
 #import "APCollectionViewCell.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 
@@ -108,6 +109,15 @@
 {
     [((APCollectionViewCell *)cell).imageView cancelCurrentImageLoad];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UICollectionViewCell *cell = (UICollectionViewCell *)sender;
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    
+    [(APPhotoDetailViewController*)[segue destinationViewController] setPhoto:self.photos[indexPath.row]];
+}
+
 
 
 @end

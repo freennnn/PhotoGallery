@@ -31,6 +31,7 @@
 		D493A958194F96F90067B217 /* APCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D493A957194F96F90067B217 /* APCollectionViewCell.m */; };
 		D493A959194F96F90067B217 /* APCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D493A957194F96F90067B217 /* APCollectionViewCell.m */; };
 		D493A95B194FF3B60067B217 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D493A95A194FF3B60067B217 /* AssetsLibrary.framework */; };
+		D493A95E1950965C0067B217 /* APPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D493A95D1950965C0067B217 /* APPhotoDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		D493A956194F96F90067B217 /* APCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCollectionViewCell.h; sourceTree = "<group>"; };
 		D493A957194F96F90067B217 /* APCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCollectionViewCell.m; sourceTree = "<group>"; };
 		D493A95A194FF3B60067B217 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		D493A95C1950965C0067B217 /* APPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPhotoDetailViewController.h; sourceTree = "<group>"; };
+		D493A95D1950965C0067B217 /* APPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPhotoDetailViewController.m; sourceTree = "<group>"; };
 		D535C15276164B39AF60B51C /* Pods-PhotoGallery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGallery.xcconfig"; path = "Pods/Pods-PhotoGallery.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +191,8 @@
 				D493A953194F89070067B217 /* APPhoto.m */,
 				D493A956194F96F90067B217 /* APCollectionViewCell.h */,
 				D493A957194F96F90067B217 /* APCollectionViewCell.m */,
+				D493A95C1950965C0067B217 /* APPhotoDetailViewController.h */,
+				D493A95D1950965C0067B217 /* APPhotoDetailViewController.m */,
 			);
 			path = PhotoGallerySDK;
 			sourceTree = SOURCE_ROOT;
@@ -329,6 +334,7 @@
 			files = (
 				D493A954194F89070067B217 /* APPhoto.m in Sources */,
 				D493A958194F96F90067B217 /* APCollectionViewCell.m in Sources */,
+				D493A95E1950965C0067B217 /* APPhotoDetailViewController.m in Sources */,
 				D493A922194F36930067B217 /* main.m in Sources */,
 				D493A950194F87790067B217 /* APCollectionViewController.m in Sources */,
 				D493A92C194F36930067B217 /* APSelectSourceTableViewController.m in Sources */,

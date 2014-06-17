@@ -39,6 +39,7 @@
                                 <connections>
                                     <outlet property="activityIndicatorView" destination="5Cp-4n-SZl" id="6Ep-86-FEd"/>
                                     <outlet property="imageView" destination="YWB-fj-tbu" id="Mhp-cM-lsC"/>
+                                    <segue destination="Sb2-8M-x8B" kind="push" id="HSk-gN-YeT"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -51,6 +52,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32B-NO-EwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-6" y="268"/>
+        </scene>
+        <!--Photo Detail View Controller - Photo Details-->
+        <scene sceneID="TcR-u2-tFM">
+            <objects>
+                <viewController id="Sb2-8M-x8B" customClass="APPhotoDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ift-pE-qew"/>
+                        <viewControllerLayoutGuide type="bottom" id="iMd-T7-z1o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tqP-SS-vaC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DW4-ao-SRt">
+                                <rect key="frame" x="10" y="10" width="300" height="471"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mev-Kh-LPH">
+                                <rect key="frame" x="20" y="489" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTX-L1-YEp">
+                                <rect key="frame" x="20" y="518" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mev-Kh-LPH" firstAttribute="top" secondItem="DW4-ao-SRt" secondAttribute="bottom" constant="8" symbolic="YES" id="0Qg-2V-wKV"/>
+                            <constraint firstItem="DW4-ao-SRt" firstAttribute="top" secondItem="tqP-SS-vaC" secondAttribute="top" constant="10" id="4bP-jR-obE"/>
+                            <constraint firstItem="DW4-ao-SRt" firstAttribute="leading" secondItem="tqP-SS-vaC" secondAttribute="leading" constant="10" id="Q2B-xh-z5X"/>
+                            <constraint firstItem="WTX-L1-YEp" firstAttribute="leading" secondItem="mev-Kh-LPH" secondAttribute="leading" id="Tge-hV-yQT"/>
+                            <constraint firstItem="WTX-L1-YEp" firstAttribute="top" secondItem="mev-Kh-LPH" secondAttribute="bottom" constant="8" symbolic="YES" id="WcB-95-dyC"/>
+                            <constraint firstAttribute="trailing" secondItem="DW4-ao-SRt" secondAttribute="trailing" constant="10" id="c2W-bk-afd"/>
+                            <constraint firstItem="mev-Kh-LPH" firstAttribute="leading" secondItem="tqP-SS-vaC" secondAttribute="leading" constant="20" symbolic="YES" id="eRE-7P-dXE"/>
+                            <constraint firstItem="iMd-T7-z1o" firstAttribute="top" secondItem="DW4-ao-SRt" secondAttribute="bottom" constant="87" id="oXQ-Kc-wQA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo Details" id="S3P-8g-lCD"/>
+                    <connections>
+                        <outlet property="imageView" destination="DW4-ao-SRt" id="EQz-gD-la5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UtW-dc-gXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="268"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
